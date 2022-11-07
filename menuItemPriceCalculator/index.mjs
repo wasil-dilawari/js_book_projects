@@ -28,7 +28,7 @@ function validQty(val) {
 function displayOrder(arr) {
   console.log("\n---------------------------");
   console.log("Your Order is");
-  for (let i = 0; i < arr.length; i++) {
+  for (let i in arr) {
     console.log(`${arr[i].qty} x ${arr[i].itemTitle}`);
     orderTotal = orderTotal + arr[i].amount;
   }
@@ -66,7 +66,7 @@ menu.push(item1, item2, item3, item4);
 //Welcome Message and Display Menu
 console.clear();
 console.log("Welcome!\n\nMenu:");
-for (let i = 0; i < menu.length; i++) {
+for (let i in menu) {
   console.log(`Item-${i + 1}: ${menu[i].itemName} for Rs.${menu[i].price}`);
 }
 
